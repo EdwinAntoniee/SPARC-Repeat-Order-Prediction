@@ -11,7 +11,7 @@
 
 ---
 🏆 **SPARC 2026 Data Science Competition — Finalist**  
-Organized by Universitas Ciputra | Developed by **Team STRIVE** (Universitas Bina Nusantara)
+Organized by Universitas Ciputra | Developed by **Team STRIVE**
 ---
 
 ## Project Overview
@@ -28,17 +28,18 @@ Rather than relying purely on standard accuracy, the team engineered a **Cost-Se
 - **Data-Driven Business Intelligence**: Demonstrated that customer repeat decisions are predominantly governed by financial burden indicators rather than demographic variables like age, uncovering key behavioral insights for targeted marketing.
 
 ## My Roles & Contributions
-- **Team Leadership & Competition Direction**
-  - Served as Team Leader for Team STRIVE throughout the SPARC 2026 competition, driving alignment between business problem formulation, data exploration, predictive modeling, and final technical reporting.
+- **Teamwork & Collaborative Problem Solving**
+  - Collaborated actively within our 3-person team (**Team STRIVE**) across the entire competition, working closely to analyze the automotive financing business scenario and formulate our end-to-end data science strategy.
+  - Brainstormed iterative analytical approaches with teammates, ensuring seamless continuity between exploratory analysis, preprocessing pipelines, and final model evaluation.
 - **Tackling the Imbalanced Data Challenge**
-  - Collaborated closely with the team to conquer the project's primary technical hurdle: training robust models on an intensely imbalanced dataset (~137k negative vs. ~19k positive cases).
-  - Designed cost-sensitive learning strategies using LightGBM's algorithmic class weight adjustments (`scale_pos_weight`) to force model sensitivity toward loyal customer signals.
-  - Guided the calibration of classification thresholds, shifting cutoff points to 0.55 to drastically suppress False Positives and preserve marketing budget.
-- **Pipeline Validation & Model Benchmarking**
-  - Verified Scikit-Learn pipeline transformers (`ColumnTransformer`, `StandardScaler`, `OneHotEncoder`, `SimpleImputer`) to eliminate data leakage risks between training and test sets.
-  - Participated in comparative model benchmarking across Logistic Regression, Random Forest, XGBoost, and LightGBM, confirming LightGBM as the optimal champion model (0.7014 ROC-AUC).
-- **Reporting & Strategic Insights**
-  - Synthesized analytical findings into the competition report, translating model feature importances and confusion matrices into actionable recommendations for automotive financing operations.
+  - Together with the team, tackled the central technical challenge of the competition: predicting repeat purchase behavior on a heavily skewed distribution (~137k negative vs. ~19k positive records).
+  - Implemented cost-sensitive machine learning via LightGBM's `scale_pos_weight` parameter, adjusting class penalty weights to capture minority repeat-buyer signals without synthesizing artificial data.
+  - Fine-tuned classification decision boundaries, shifting the probability cutoff to 0.55 to achieve an optimal balance between catching potential returning buyers (62% Recall) and drastically reducing expensive telemarketing errors (False Positives).
+- **Pipeline Verification & Model Benchmarking**
+  - Co-verified Scikit-Learn pipeline transformers (`ColumnTransformer`, `StandardScaler`, `OneHotEncoder`, `SimpleImputer`), ensuring zero data leakage across stratified train and test partitions.
+  - Benchmarked model families (Logistic Regression, Random Forest, XGBoost, LightGBM), identifying LightGBM as the most reliable, computationally efficient solution (0.7014 ROC-AUC).
+- **Reporting & Business Impact Translation**
+  - Contributed to synthesizing empirical findings into the final competition submission, translating feature importance findings and cost-benefit trade-offs into practical strategic recommendations.
 
 ## Architecture
 The analytical pipeline spans three integrated phases designed for reproducibility, statistical rigor, and business efficiency:
